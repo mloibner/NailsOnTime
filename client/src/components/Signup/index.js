@@ -7,11 +7,11 @@ function Signup() {
             <h2>Sign Up</h2>
             <form>
                 <input type="text" placeholder ="Name"></input>
-                <input type="number" placeholder="Phone"></input>
+                <input type="text" placeholder="Phone"></input>
                 <input type="email" placeholder="Email"></input>
-                <input type="password" placeholder="Create Password">Password</input>
-                <input type="password" placeholder="Confirm Password">Password</input>
-                <input type="submit"><button>Submit</button></input>
+                <input type="password" placeholder="Create Password"></input>
+                <input type="password" placeholder="Confirm Password"></input>
+                <input type="submit"></input>
             </form>
 
         </div>

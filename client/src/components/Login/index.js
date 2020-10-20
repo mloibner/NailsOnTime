@@ -2,9 +2,13 @@ import React from "react";
 import "./style.css";
 
 function Login() {
-<div>
-    
-</div>
+   return (<div>
+        <h2>Log In</h2>
+        <form>
+            <input type="text" placeholder="Email"></input>
+            <input type="password" placeholder="Password"></input>
+        </form>
+    </div>)
 };
 
 export default Login;

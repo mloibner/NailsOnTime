@@ -2,7 +2,7 @@ import React from "react";
 import "./style.css";
 
 function BookingPage() {
-<div>
+return(<div>
     <div>Nail Salon will go in here</div>
     <div>Technician will go in here</div>
     <table>
@@ -71,7 +71,8 @@ function BookingPage() {
             <td id="4:30PM"></td>
         </tr>
     </table>
-</div>
+    <button>Nail Me</button>
+</div>)
 
 }
 

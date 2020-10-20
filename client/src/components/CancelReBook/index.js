@@ -2,10 +2,10 @@ import React from "react";
 import "./style.css";
 
 function CancelBook() {
-    <div>
+   return ( <div>
         <button>Cancel/Change Appointment</button>
         <button>Book Again</button>
-    </div>
+    </div>)
 };
 
 export default CancelBook;
