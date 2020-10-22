@@ -17,8 +17,8 @@ function Login() {
     
     }
     
-   return (<div>
-        <h2>Log In</h2>
+   return (<div className="loginDiv">
+        <h2 className="heading">Log In</h2>
         <form>
             <input type="text" value={user.username} onChange={(e)=> {
                     const updatedUser = {...user, username: e.target.value}
@@ -28,7 +28,9 @@ function Login() {
                     const updatedUser = {...user, password: e.target.value}
                     setUser(updatedUser);
                 }} placeholder="Password"></input>
-            <button onClick={handleSignin} type="submit">Login</button>
+                <div className="loginDiv">
+                    <button className="loginBtn" onClick={handleSignin} type="submit">Login</button>
+                </div>
         </form>
     </div>)
 };

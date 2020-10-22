@@ -1,0 +1,22 @@
+.logIn, .signUp {
+    padding: 10px;
+    display: inline-block;
+    margin: 25px;
+    color: #E635CB;
+    border-color: #E635CB;
+    border-radius: 4rem;
+    width: 175px;
+    height: 50px;
+    font-family: 'Parisienne', cursive;    
+    font-size: x-large;
+}
+
+.homeDiv {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 50% 25%;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    justify-items: center;
+    align-items: stretch ;
+}
