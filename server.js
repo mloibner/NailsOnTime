@@ -1,9 +1,12 @@
 const express = require("express");
-
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
+const passport = require('passport');
+const session = require('express-session');
+const LocalStrategy = require('passport-local').Strategy;
 const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
+var User = require('./models/user');
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
@@ -12,7 +15,20 @@ app.use(express.json());
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
-// Add routes, both API and view
+app.use(session({
+  name: 'session-id',
+  secret: '123-456-789',
+  saveUninitialized: false,
+  resave: false
+}));
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+passport.use(new LocalStrategy(User.authenticate()));
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
 app.use(routes);
 
 // Connect to the Mongo DB
