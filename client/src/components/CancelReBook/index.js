@@ -1,11 +1,11 @@
 import React from "react";
-import "./style.css";
+import "../style.css";
 
-function CancelBook() {
-   return ( <div>
-        <button>Cancel/Change Appointment</button>
-        <button>Book Again</button>
+function CancelReBook() {
+   return ( <div className="homeDiv">
+        <button className="btn">Cancel/Change</button>
+        <button className="btn">Book Again</button>
     </div>)
 };
 
-export default CancelBook;
+export default CancelReBook;

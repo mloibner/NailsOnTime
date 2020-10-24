@@ -1,14 +1,17 @@
 import React from "react";
-import "./sty;e.css";
+import "../style.css";
 
-function Countdown() {
-   return (<div>
-        <h1>Time To Nails</h1>
-        <h3>Rock Up when the Clock Up</h3>
+function Countdown() { 
+return (
+        <div className="homeDiv">
+        <h1 className="heading">Nails on time in:</h1>
         <div>
-            Countdown goes in here.
+            "10m:30s" ... Countdown goes in here.
         </div>
-    </div>)
+        <h3 className="headingTwo">Rock Up when the Clock Up</h3>
+    </div>
+    )
+   
 };
 
 export default Countdown;

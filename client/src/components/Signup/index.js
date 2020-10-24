@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import "./style.css";
+import "../style.css";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
 
@@ -18,20 +18,19 @@ function Signup() {
 
         }
     return (
-        <div className="signupDiv">
-            <h2>Sign Up</h2>
-            <form>
-                <input type="username" value={user.username} onChange={(e)=> {
+        <div className="homeDiv">
+            <h2 className="heading">Sign Up</h2>
+            <form className="signForm">
+                <input className="input" type="username" value={user.username} onChange={(e)=> {
                     const updatedUser = {...user, username: e.target.value}
                     setUser(updatedUser);
                 }} placeholder ="Username"></input>
-                <input type="password" value={user.password} onChange={(e)=> {
+                <input className="input" type="password" value={user.password} onChange={(e)=> {
                     const updatedUser = {...user, password: e.target.value}
                     setUser(updatedUser);
                 }} placeholder="Create Password"></input>
-                <button onClick={handleSignup} type="submit">Submit</button>
+                <button className="input inputBtn" onClick={handleSignup} type="submit">Submit</button>
             </form>
-
         </div>
     );
 }

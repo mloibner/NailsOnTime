@@ -1,0 +1,130 @@
+.loginDiv {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 50% 25%;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    justify-items: center;
+    align-items: stretch ;
+    font-family: 'Parisienne', cursive;
+}
+.heading{
+    font-size: 75px;
+    color: #E635CB;
+    font-family: 'Parisienne', cursive;
+}
+.font {
+    color: #E635CB;
+    font-family: 'Parisienne', cursive;
+    padding: 10px
+}
+.headingTwo{
+    font-size: 25px;
+    color: #E635CB;
+    font-family: 'Parisienne', cursive; 
+}
+.loginBtn {
+    font-family: 'Parisienne', cursive;
+    display: inline-block;
+    padding: 10px;
+    width: 150px;
+    border-radius: 4rem;
+    font-size: large;
+    border-color: #E635CB;
+    height: 50px;
+    margin-top: 100px;
+}
+
+.btn {
+    padding: 10px;
+    display: inline-block;
+    margin: 25px;
+    color: #E635CB;
+    border-color: #E635CB;
+    border-radius: 4rem;
+    width: 175px;
+    height: 50px;
+    font-family: 'Parisienne', cursive;    
+    font-size: x-large;
+}
+.btn:hover {
+cursor: pointer;
+}
+
+.homeDiv {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 50% 25%;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    justify-items: center;
+    align-items: stretch ;
+    text-align: center;
+}
+.signForm {
+    padding: 25px;
+    display: inline-block;
+}
+.input {
+    display: grid;
+    padding-left: 10px;
+    margin-left: 10px;
+    grid-template-columns: auto;
+    grid-template-rows: 50% 25%;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    justify-items: center;
+    min-width: 350px;
+    min-height: 25px;
+    margin-top: 10px;
+}
+
+.navBar {
+    display: grid;
+    justify-items: center;
+    background-color: rgb(221, 218, 218);
+  }
+
+
+
+.littleLogo{
+    max-width: 150px;
+}
+.icon{
+    position: right;
+    color: #E635CB;
+    font-family: 'Parisienne', cursive;    
+    text-align: right;
+    font-size: x-large;
+}   
+.nav {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 50% 25%;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+}
+
+.calDiv {
+    justify-items: center;
+}
+
+.footer {
+    height: 75px;
+    background-color: #E635CB;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  .fBtn{
+    height: 25px;
+    font-size: medium;
+    width: 100px;
+    display: inline-block;
+    margin: 25px;
+    color: #E635CB;
+    border-color: #E635CB;
+    border-radius: 4rem;
+    font-family: 'Parisienne', cursive;    
+
+  }

@@ -1,5 +1,5 @@
 import React from "react";
-import "./style.css";
+import "../style.css";
 
 //MONIQUE, read me:   How are you going to have the options in salon linked to the technician options? Are you going to 
 //need to use PROPS or something like that to execute so the technician list changes depending on the input of the 
@@ -8,10 +8,11 @@ import "./style.css";
 
 function Technician() {
     return (
-        <div className="technicianDiv">
-            <form>
-                <label for="technician">Technician:</label>
-                <select id="technician" name="technician">
+        <div className="homeDiv">
+            <form className="font">
+                <label for="technician">Technician</label>
+                <select id="technician" name="technician" className="form">
+                    <option value="">Select</option>
                     <option value="rachel">Rachel</option>
                     <option value="anna">Anna</option>
                     <option value="lucky">Lucky</option>
