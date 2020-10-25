@@ -9,7 +9,7 @@ function Footer(){
   
   function handleLogOut(e) {
     e.preventDefault();
-    axios.get("/logout", user).then((res)=>{
+    axios.get("/api/users/logout").then((res)=>{
         history.push("/login");    
     }).catch((err)=>{
         console.error(err)

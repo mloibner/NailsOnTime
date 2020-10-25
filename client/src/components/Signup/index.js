@@ -4,7 +4,7 @@ import axios from "axios";
 import { useHistory } from "react-router-dom";
 
 function Signup() {
-    const [user, setUser] = useState({username: "", password: ""});
+    const [user, setUser] = useState({username: "", password: "", email: "", name: "", phone: ""});
     const history = useHistory();
 
     function handleSignup(e) { 
@@ -20,16 +20,28 @@ function Signup() {
     return (
         <div className="homeDiv">
             <h2 className="heading">Sign Up</h2>
-            <form className="signForm">
-                <input className="input" type="username" value={user.username} onChange={(e)=> {
+            <form className="signForm" onSubmit={handleSignup}>
+                <input required className="input" type="name" value={user.name} onChange={(e)=> {
+                    const updatedUser = {...user, name: e.target.value}
+                    setUser(updatedUser);
+                }} placeholder="Name"></input>
+                <input required className="input" type="email" value={user.email} onChange={(e)=> {
+                    const updatedUser = {...user, email: e.target.value}
+                    setUser(updatedUser);
+                }} placeholder ="Email"></input>
+                <input required className="input" type="phone" value={user.phone} onChange={(e)=> {
+                    const updatedUser = {...user, phone: e.target.value}
+                    setUser(updatedUser);
+                }} placeholder ="Phone"></input>
+                <input required className="input" type="username" value={user.username} onChange={(e)=> {
                     const updatedUser = {...user, username: e.target.value}
                     setUser(updatedUser);
                 }} placeholder ="Username"></input>
-                <input className="input" type="password" value={user.password} onChange={(e)=> {
+                <input required className="input" type="password" value={user.password} onChange={(e)=> {
                     const updatedUser = {...user, password: e.target.value}
                     setUser(updatedUser);
-                }} placeholder="Create Password"></input>
-                <button className="input inputBtn" onClick={handleSignup} type="submit">Submit</button>
+                }} placeholder ="Password"></input>    
+                <button className="input inputBtn" type="submit">Submit</button>
             </form>
         </div>
     );

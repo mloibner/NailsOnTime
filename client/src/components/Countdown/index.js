@@ -4,7 +4,7 @@ import "../style.css";
 function Countdown() { 
 return (
         <div className="homeDiv">
-        <h1 className="heading">Nails on time in:</h1>
+        <h1 className="headingTwo">Nails on time in:</h1>
         <div>
             "10m:30s" ... Countdown goes in here.
         </div>

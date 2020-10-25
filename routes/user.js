@@ -5,7 +5,10 @@ const router = require("express").Router();
 
 router.post('/signup', (req, res, next) => {
   User.register(new User({
-      username: req.body.username
+      username: req.body.username,
+      name: req.body.name,
+      phone: req.body.phone,
+      email: req.body.email
     }),
     req.body.password, (err, user) => {
       if (err) {
@@ -65,6 +68,15 @@ router.post('/login', passport.authenticate('local'), (req, res) => {
       next(err);
     }
   });
+
+  router.get('/me', function(req, res) {
+    res.json({ 
+      username: req.user.username,
+      email: req.user.email,
+      phone: req.user.phone,
+      name: req.user.name
+     });
+});
 
   module.exports = router;
 

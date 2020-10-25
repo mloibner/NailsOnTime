@@ -22,6 +22,14 @@
     font-size: 25px;
     color: #E635CB;
     font-family: 'Parisienne', cursive; 
+    margin-bottom: 50px;
+}
+.headingThree{
+    font-size: 50px;
+    color: #E635CB;
+    font-family: 'Parisienne', cursive; 
+    margin-top: 50px
+
 }
 .loginBtn {
     font-family: 'Parisienne', cursive;
@@ -32,13 +40,13 @@
     font-size: large;
     border-color: #E635CB;
     height: 50px;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 .btn {
     padding: 10px;
     display: inline-block;
-    margin: 25px;
+    margin-top: 25px;
     color: #E635CB;
     border-color: #E635CB;
     border-radius: 4rem;
@@ -85,8 +93,6 @@ cursor: pointer;
     background-color: rgb(221, 218, 218);
   }
 
-
-
 .littleLogo{
     max-width: 150px;
 }
@@ -95,7 +101,8 @@ cursor: pointer;
     color: #E635CB;
     font-family: 'Parisienne', cursive;    
     text-align: right;
-    font-size: x-large;
+    font-size: xx-large;
+    
 }   
 .nav {
     display: grid;
@@ -123,7 +130,7 @@ cursor: pointer;
     display: inline-block;
     margin: 25px;
     color: #E635CB;
-    border-color: #E635CB;
+    border: 1px solid #E635CB;
     border-radius: 4rem;
     font-family: 'Parisienne', cursive;    
 

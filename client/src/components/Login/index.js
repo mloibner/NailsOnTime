@@ -18,18 +18,18 @@ function Login() {
     }
     
    return (<div className="loginDiv">
-        <h2 className="heading">Log In</h2>
-        <form>
-            <input type="text" value={user.username} onChange={(e)=> {
+        <h2 className="headingThree">Log In</h2>
+        <form onSubmit={handleSignin}>
+            <input required className="input" type="text" value={user.username} onChange={(e)=> {
                     const updatedUser = {...user, username: e.target.value}
                     setUser(updatedUser);
                 }} placeholder="Username"></input>
-            <input type="password" value={user.password} onChange={(e)=> {
+            <input required className="input" type="password" value={user.password} onChange={(e)=> {
                     const updatedUser = {...user, password: e.target.value}
                     setUser(updatedUser);
                 }} placeholder="Password"></input>
                 <div className="loginDiv">
-                    <button className="loginBtn" onClick={handleSignin} type="submit">Login</button>
+                    <button className="loginBtn" type="submit">Login</button>
                 </div>
         </form>
     </div>)
