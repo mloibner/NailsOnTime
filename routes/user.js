@@ -72,9 +72,6 @@ router.post('/login', passport.authenticate('local'), (req, res) => {
   router.get('/me', function(req, res) {
     res.json({ 
       username: req.user.username,
-      email: req.user.email,
-      phone: req.user.phone,
-      name: req.user.name
      });
 });
 
