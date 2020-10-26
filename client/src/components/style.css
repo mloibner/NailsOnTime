@@ -31,6 +31,15 @@
     margin-top: 50px
 
 }
+
+.headingFour{
+    font-size: 45px;
+    color: #E635CB;
+    font-family: 'Parisienne', cursive; 
+    text-align: center;
+    margin-bottom: 5px;
+}
+
 .loginBtn {
     font-family: 'Parisienne', cursive;
     display: inline-block;
@@ -55,8 +64,24 @@
     font-family: 'Parisienne', cursive;    
     font-size: x-large;
 }
+
 .btn:hover {
 cursor: pointer;
+}
+
+.btnNext{
+    padding: 10px;
+    display: inline-block;
+    margin-top: 5px;
+    color: #E635CB;
+    border-color: #E635CB;
+    border-radius: 4rem;
+    width: 75px;
+    height: 10px;
+    line-height: 5px;
+    font-family: 'Parisienne', cursive;    
+    font-size: small;
+    text-align: center;
 }
 
 .homeDiv {
@@ -87,6 +112,24 @@ cursor: pointer;
     margin-top: 10px;
 }
 
+.salInput{
+    display: inline-block;
+    padding-left: 10px;
+    margin-left: 10px;
+    grid-template-columns: auto;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    justify-items: center;
+    max-width: 350px;
+    min-width: 349px;
+    min-height: 25px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.booking{
+    margin-bottom: 5px;
+}
+
 .navBar {
     display: grid;
     justify-items: center;
@@ -94,11 +137,11 @@ cursor: pointer;
   }
 
 .littleLogo{
-    max-width: 150px;
+    max-width: 110px;
 }
 .icon{
     position: right;
-    color: #E635CB;
+    color: #d1cece;
     font-family: 'Parisienne', cursive;    
     text-align: right;
     font-size: xx-large;
@@ -110,28 +153,63 @@ cursor: pointer;
     grid-template-rows: 50% 25%;
     grid-column-gap: 5px;
     grid-row-gap: 5px;
-}
-
-.calDiv {
-    justify-items: center;
+    background-color: #E635CB;
+    max-height: 100px;
 }
 
 .footer {
-    height: 75px;
+    height: 50px;
     background-color: #E635CB;
     position: fixed;
     bottom: 0;
     width: 100%;
+    
   }
   .fBtn{
     height: 25px;
     font-size: medium;
     width: 100px;
-    display: inline-block;
-    margin: 25px;
     color: #E635CB;
     border: 1px solid #E635CB;
     border-radius: 4rem;
-    font-family: 'Parisienne', cursive;    
+    font-family: 'Parisienne', cursive;  
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);  
+    left: 50%;
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%); 
 
   }
+
+  .calDiv {
+    justify-items: center;
+    width: 350px;
+    margin: 0 auto;
+    text-align: right;
+}
+
+table {
+    text-align: left;
+    min-width: 350px;
+    border: 3px solid black;
+    margin: 0 auto;
+    border-collapse: collapse;
+
+}
+
+tr, td {
+border: 2px solid black;
+line-height: 25px;
+max-width: 15px
+}
+
+.scheduleSal {
+    padding: 15px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Parisienne', cursive; 
+    font-size: large;
+}

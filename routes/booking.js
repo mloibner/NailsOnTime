@@ -7,6 +7,7 @@ router.post('/booking', (req, res) => {
       date: req.body.date,
       technician: req.body.technician,
       salon: req.body.salon,
+      time: req.body.time
     }))
 });
 

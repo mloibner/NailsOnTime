@@ -5,6 +5,7 @@ import HomePage from "./pages/home";
 import LoginPage from "./pages/loginPage";
 import Member from "./pages/member";
 import Signup from "./pages/signup";
+import Schedule from "./pages/schedule"
 
 
 function App() {
@@ -26,6 +27,9 @@ function App() {
           </Route>
           <Route exact path="/booking">
             <Booking />
+          </Route>
+          <Route exact path="/schedule">
+            <Schedule />
           </Route>
         </Switch>
       </div>

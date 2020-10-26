@@ -11,7 +11,7 @@ function Technician() {
         <div className="homeDiv">
             <form className="font">
                 <label for="technician">Technician</label>
-                <select id="technician" name="technician" className="form">
+                <select id="technician" name="technician" className="salInput">
                     <option value="">Select</option>
                     <option value="rachel">Rachel</option>
                     <option value="anna">Anna</option>

@@ -11,13 +11,17 @@ function CancelReBook() {
     function newDelete(){
         axios.delete("/api/booking/delete", booking).then(()=>{
             history.push("/member");
+        }).catch((err)=>{
+            console.error(err)
         });
     };
 
     function bookingChange(){
-        axios.put("/api/booking/change").then(()=>{
+        axios.put("/api/booking/change", updatedBooking).then(()=>{
             history.push("/booking")
-        })
+        }).catch((err)=>{
+            console.error(err)
+        });
     }
 
     useEffect(()=>{

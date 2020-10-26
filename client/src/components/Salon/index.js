@@ -8,10 +8,11 @@ import "../style.css";
 
 function SalonSelect() {
     return (
-        <div className="homeDiv">
+        <div className="homeDiv booking">
+            <h1 className="headingThree">Book Appointment</h1>
             <form className="font">
                 <label for="salon">Salon</label>
-                <select id="salon" name="salon">
+                <select id="salon" name="salon" className="salInput">
                     <option value="">Select</option>
                     <option value="GloNailsDrummoyne">Glo Nails Drummoyne</option>
                     <option value="BensNailsFiveDock">Ben's Nails Five Dock</option>

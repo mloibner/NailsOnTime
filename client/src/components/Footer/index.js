@@ -18,9 +18,7 @@ function Footer(){
 
   return (
     <footer className="footer">
-      <span>
-          <button className="fBtn" onClick={handleLogOut}>Log Out</button>
-      </span>
+      <button className="fBtn" onClick={handleLogOut}>Log Out</button>
     </footer>
   );
 }

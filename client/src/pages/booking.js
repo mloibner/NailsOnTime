@@ -4,6 +4,7 @@ import Technician from "../components/Technician"
 import MyApp from "../components/Calendar"
 import Footer from "../components/Footer"
 import NavbarLoggedIn from "../components/NavbarLoggedIn"
+import NextBtn from "../components/NextBtn/NextBtn";
 
 function Booking() {
     return(
@@ -12,6 +13,7 @@ function Booking() {
             <Salon />
             <Technician />
             <MyApp />
+            <NextBtn />
             <Footer />
         </div>
     )

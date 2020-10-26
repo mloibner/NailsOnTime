@@ -26,7 +26,7 @@ function NavbarMember() {
         <img className="littleLogo" src={logo} alt="Nails on Time logo"></img>
         <nav className="icon" onClick={()=> {
           history.push("/member")
-        }}>{user}<i className="fas fa-user-alt"></i>
+        }}>{user + " "}<i className="fas fa-user-alt"></i>
         </nav>
     </header>)
 };
