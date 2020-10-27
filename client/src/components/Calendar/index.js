@@ -16,7 +16,7 @@ function Calendar(){
     function handleBooking() {
         axios.post("/api/booking/book", booking).then((res)=>{
           history.push("/schedule");
-          console.log(res.JSON)
+          console.log(booking)
       }).catch((err)=>{
           console.error(err)
       });
@@ -70,7 +70,7 @@ console.log(booking)
         value={startDate}
         minDate={moment().toDate()} 
         onSelect={()=>{
-          let updateDate = {date: JSON.stringify(startDate)}
+          let updateDate = {date: startDate}
           setBooking(updateDate)}}
       />
       <div className="btnNext">
