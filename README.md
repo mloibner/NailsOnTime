@@ -3,7 +3,7 @@
   ![NPM version](https://img.shields.io/badge/npm-6.14.4-green)
   ![GitHub license](https://img.shields.io/badge/License-MITLicense-blue.svg)
 
-<img src="./assets/readme.png">
+<img src="./client/assets/readme.png">
           
           
 ## Table of Contents
@@ -18,8 +18,8 @@
 As a woman (or man) with a busy schedule, I dont have time to wait around for appointments that are running late. I want an application for a nail salon in particular, where if they are running late, they can notify me. I also want to be able to log in and log out, and upon login, see a countdown til my appointment, as well as change or delete my appointment which will notify the salon directly. (this user story notes the end goal for this application, not all above functionality is available in this version) 
 You can access it here https://damp-hollows-16395.herokuapp.com/
 
-<img src="./assets/readme2.png">
-<img src="./assets/readme3.png">
+<img src="./client/assets/readme2.png">
+<img src="./client/assets/readme3.png">
 
 ### Installation Instructions
 To install the application run the following command:
