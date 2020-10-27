@@ -16,10 +16,9 @@ const BookingSchema = new mongoose.Schema({
   required: true
   }
 },{
-  time: {
-    type: Number,
+  username: {
+    type: String,
     required: true,
-    unique: true
   }
 });
 

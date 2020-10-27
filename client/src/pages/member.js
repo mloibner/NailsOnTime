@@ -5,7 +5,8 @@ import CancelReBook from "../components/CancelReBook"
 import Book from "../components/Book"
 import Footer from "../components/Footer"
 
-const booking = false
+const booking = true
+
 
 function Member() {
 

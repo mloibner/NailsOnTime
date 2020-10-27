@@ -131,7 +131,7 @@ function BookingPage() {
 //     <button type="submit" onSubmit={handleBooking} className="btnNext">Book</button>
 // </div>)
 
-const [startDate, setStartDate] = useState(new Time());
+const [startDate, setStartDate] = useState(new Date());
     return (
         <div>   
         

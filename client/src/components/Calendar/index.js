@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import "../style.css"
 import moment from "moment";
 import DatePicker from 'react-date-picker';
@@ -9,18 +9,32 @@ import Moment from 'react-moment';
 
 function Calendar(){
 
-  const [booking, setBooking] = useState({salon: "", technician: "", date: ""});
+  const [booking, setBooking] = useState({salon: "", technician: "", date: "", username: ""});
   const history = useHistory();
+  const [user, setUsername] = useState("")
   const [startDate, setStartDate] = useState(new Date());
-
+  function getUsername() {
+  
+  
+    axios.get("/api/users/me").then((res)=> {
+      console.log(res)
+      setUsername(res.data.username)
+      }).catch((err)=>{
+      console.log(err)
+    });
+  }
     function handleBooking() {
-        axios.post("/api/booking/book", booking).then((res)=>{
+        axios.post("/api/booking/book", {...booking, username: user}).then((res)=>{
           history.push("/schedule");
           console.log(booking)
       }).catch((err)=>{
           console.error(err)
       });
     }
+
+useEffect(() =>{getUsername()})
+
+
 console.log( startDate)
 console.log(booking)
   return (
