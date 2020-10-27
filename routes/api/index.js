@@ -5,8 +5,6 @@ const bookingController = require("../../controllers/bookingController")
 router.route("/")
   .get(userController.findAll)
   .post(userController.create)
-
-router.route("/")
   .get(bookingController.findAll)
   .post(bookingController.create);
 
@@ -15,9 +13,6 @@ router
   .get(userController.findById)
   .put(userController.update)
   .delete(userController.remove)
-
-router
-  .route("/:id")
   .get(bookingController.findById)
   .put(bookingController.update)
   .delete(bookingController.remove);

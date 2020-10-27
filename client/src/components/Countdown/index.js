@@ -13,7 +13,7 @@ function Countdown() {
   function getUsername() {
   
   
-    axios.get("/api/users/me").then((res)=> {
+    axios.get("/api/users/me", user).then((res)=> {
       console.log(res)
       setUsername(res.data.username)
       }).catch((err)=>{
@@ -23,7 +23,7 @@ function Countdown() {
   useEffect(() =>{getUsername()})
 
   function getBooking() {
-    axios.get("/api/booking/" + user).then((res)=> {
+    axios.get("/api/booking/" + user, booking).then((res)=> {
         console.log(res.data.date)
         setBooking(res.data)
     }).catch((err)=>{
