@@ -25,24 +25,22 @@ router.post('/book', (req, res) => {
   });
 });
 
-router.put('/change', async (req, res) => {
-   const updatedBooking = await Booking.findOneAndUpdate({
-      salon: req.body.salon,
-      technician: req.body.technician,
-      date: req.body.date,
-    }, (err) => {
-      res.statusCode = 200;
-      res.setHeader('Content-Type', 'application/json');
-      res.json({
-        success: true,
-        status: 'Your booking has been updated!'
-      }); 
-    });
-    res.json(updatedBooking)
+router.put('/change', (req, res) => {
+  console.log("changing booking")
+  console.log(req.body)
+  Booking.update((err)=> {
+    if (err) {
+      console.log(err)
+    }
+  });
+  res.json({
+    success: true,
+    status: 'Your booking has been updated!'
+  });
 });
 
 router.delete('/delete', (req, res) => {
-  req.findById((err) => {
+  Booking.remove((err) => {
     if (err) {
       console.log(err);
     } else {

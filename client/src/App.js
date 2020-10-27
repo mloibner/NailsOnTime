@@ -28,9 +28,6 @@ function App() {
           <Route exact path="/booking">
             <Booking />
           </Route>
-          <Route exact path="/schedule">
-            <Schedule />
-          </Route>
         </Switch>
       </div>
     </Router>

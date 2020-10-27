@@ -25,7 +25,7 @@ function Calendar(){
   }
     function handleBooking() {
         axios.post("/api/booking/book", {...booking, username: user}).then((res)=>{
-          history.push("/schedule");
+          history.push("/member");
           console.log(booking)
       }).catch((err)=>{
           console.error(err)
@@ -86,6 +86,11 @@ console.log(booking)
         onSelect={()=>{
           let updateDate = {date: startDate}
           setBooking(updateDate)}}
+        showTimeSelect
+        timeFormat="HH:mm"
+        timeIntervals={15}
+        timeCaption="time"
+        dateFormat="MMMM d, yyyy h:mm aa"
       />
       <div className="btnNext">
         <button type="submit" onClick={handleBooking} className="btnNext">Book</button>
