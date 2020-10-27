@@ -10,7 +10,6 @@ function CancelReBook() {
 
     function newDelete(){
         axios.delete("/api/booking/delete", booking).then(()=>{
-            history.push("/member");
         }).catch((err)=>{
             console.error(err)
         });
@@ -18,7 +17,6 @@ function CancelReBook() {
 
     function bookingChange(){
         axios.put("/api/booking/change", updatedBooking).then(()=>{
-            history.push("/booking")
         }).catch((err)=>{
             console.error(err)
         });
@@ -30,8 +28,8 @@ function CancelReBook() {
     });
 
    return ( <div className="homeDiv">
-        <button className="btn" onClick={deleteBooking}>Cancel</button>
-        <button className="btn" onClick={changeBooking}>Change</button>
+        <button className="btn" onClick={deleteBooking, ()=> {history.push("/booking")}}>Cancel</button>
+        <button className="btn" onClick={changeBooking, ()=> {history.push("/booking")}}>Change</button>
     </div>)
 };
 

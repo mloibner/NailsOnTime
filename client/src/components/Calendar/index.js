@@ -4,6 +4,7 @@ import moment from "moment";
 import DatePicker from 'react-date-picker';
 import axios from "axios";
 import {useHistory} from "react-router-dom";
+import Moment from 'react-moment';
 
 
 function Calendar(){
@@ -13,11 +14,15 @@ function Calendar(){
   const [startDate, setStartDate] = useState(new Date());
 
     function handleBooking() {
-        console.log(booking);
-        axios.post("/api/booking", booking);
-        history.push("/schedule");
+        axios.post("/api/booking/book", booking).then((res)=>{
+          history.push("/schedule");
+          console.log(res.JSON)
+      }).catch((err)=>{
+          console.error(err)
+      });
     }
-
+console.log( startDate)
+console.log(booking)
   return (
     <div className="homeDiv booking">
         <h1 className="headingThree">Book Appointment</h1>
@@ -47,15 +52,29 @@ function Calendar(){
         </form>  
       <DatePicker
         selected={startDate}
-        onChange={date => setStartDate(date)}
-        minDate={moment().toDate()}
-        value={booking.date}
-        onChange={()=>{
-          const updateDate = {...booking, date: {startDate}}
+
+        onChange={
+
+          (e)=>{
+
+          let setDate=(date)=>{setStartDate(date)}; 
+          setDate(e);
+          
+
+
+          let bookingDate=(e)=>{setBooking({...booking, date: JSON.stringify(e+1)})};
+          bookingDate(e);
+          
+        }}
+        
+        value={startDate}
+        minDate={moment().toDate()} 
+        onSelect={()=>{
+          let updateDate = {date: JSON.stringify(startDate)}
           setBooking(updateDate)}}
       />
       <div className="btnNext">
-        <button type="submit" onSubmit={handleBooking}className="btnNext">Book</button>
+        <button type="submit" onClick={handleBooking} className="btnNext">Book</button>
       </div>
     </div>
   );
