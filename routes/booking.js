@@ -8,17 +8,21 @@ router.get('/api/booking', async (req, res) => {
 });
 
 
-router.post('/api/booking/book', (req, res) => {
+router.post('/book', (req, res) => {
   Booking.create(new Booking({
       salon: req.body.salon,
       technician: req.body.technician,
       date: req.body.date,
     }, (err) => {
+      if (err) {
+        console.error(err);
+        res.sendStatus(422);
+      }
       res.statusCode = 200;
         res.setHeader('Content-Type', 'application/json');
         res.json({
         success: true,
-        status: 'Your booking has made!'
+        status: 'Your booking has been made!'
       });
   }))
 });

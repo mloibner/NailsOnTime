@@ -4,7 +4,6 @@ const apiRoutes = require("./api");
 const userRoutes = require("./user");
 const bookingRoutes = require("./booking");
 // API Routes
-router.use("/api", apiRoutes);
 router.use("/api/users", userRoutes);
 router.use("/api/booking", bookingRoutes);
 
